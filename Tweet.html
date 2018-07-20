@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>twi Y0</title>
+    <link rel="stylesheet" href="tweet.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>ツイート</h1>
+        <div id="cover-layer"></div>
+         <a href="#slide-menu" id="but1" type="button">…</a>
+    </header><!--#header-->
+    <main>
+      <form id="form">
+        <h2>投稿する</h2>
+          <div id="area"> 
+          <textarea name="tweet"></textarea>
+          <input type="submit" value="ツイート" class="twe">
+        </div>
+        <input type="file" name="picture"><br>
+      </form>
+    </main><!--#main-->
+    <div id="slide-menu">
+      <a href="index.html" class="a1">ホーム</a>
+      <a href="TimeLine.php" class="a0">TimeLine</a>
+      <a href="oauth.php" class="a2">連携</a>
+    </div>
+    <footer></footer><!--footer-->
+    <script>
+    $('#form').submit(function(event) {
+      event.preventDefault();
+      let res = $.ajax({
+        url: 'tweet.php',
+        async: false,
+        type: 'POST',
+        dataType: 'json',
+        data: $(this).serialize()
+      }).status;
+      $('#form')[0].reset();
+      $('main').append('<div id="res">'+res+'</div>');
+    });
+    $(function() {
+      $('#but1').on('click', function () {
+        if ($('#cover-layer').css('display') == 'none') {
+          var width = $('.slide-menu').outerWidth();
+          $('#cover-layer').show();
+          $('#cover-layer').animate({'right': width}, {duration: 400});
+          $('#slide-menu').animate({'right': 0}, {duration: 400});
+        }
+      });
+      $('#cover-layer').on('click', function () {
+        var width = $('#slide-menu').outerWidth();
+        $('#cover-layer').animate({'right': 0}, {duration: 400});
+        $('#slide-menu').animate({'right': -width}, {duration: 400});
+        $('#cover-layer').hide();
+      });
+    });
+    </script>
+  </body>
+</html>

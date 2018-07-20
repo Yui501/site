@@ -1,0 +1,66 @@
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+html, body{height: 100%;}
+#e{
+position: relative;
+}
+#e .but1{
+  float:right; 
+  position: absolute;
+  top:0;
+  right:15px;
+  padding:1px 1px;
+  text-decoration:none;
+  color:#fff;
+  font-size:60px;
+}
+#e p{
+position: absolute;
+top:0;
+left:0;
+color:#fff;
+font-size:40px;
+margin:0;
+padding:0;
+}
+#e .a2{
+position: absolute;
+text-decoration:none;
+font-size:70px;
+color:#fff;
+bottom:35%;
+left:50%;
+transform:translate(-50%,-50%);
+margin:0;
+padding:0;
+}
+#e img{
+  width: 100%;
+}
+#cover-layer{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  background:#000;
+  opacity: 0.3;
+  display: none;
+  z-index: 4;
+}
+#slide-menu {
+  position: fixed;
+  height: 100%;
+  top: 0;
+  right:-150px;
+  width:150px;
+  background:#4e8f99;
+  z-index: 5;
+  opacity: 0.8;
+}
+#slide-menu a{
+  top:5px;
+ font-size:30px;
+ color:#fff;
+ padding:10px;
+ text-decoration:none;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>twi Y</title>
+  <link rel="stylesheet" href="MyStyle.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+<body>
+  <header>
+    <div id="cover-layer"></div> 
+  </header>
+  <main>
+    <div id="e">
+      <img src="picture/fuck.png">
+      <p class="p0">twi Y</p>
+      <a class="but1" href="#slide-menu">…</a>
+      <a class="a2" href="TimeLine.php">その瞬間を、共有しよう</a>
+    </div>
+  </main>
+  <div id="slide-menu">
+    <a href="TimeLine.php" class="a0">TimeLine</a>
+    <a href="tweet.html" class="a1">ツイート</a>
+    <a href="oauth.php" class="a2">連携</a>
+  </div>
+  <footer></footer>
+  <script>
+  $(function() {
+    $('.but1').on('click', function () {
+      if ($('#cover-layer').css('display') == 'none') {
+        var width = $('.slide-menu').outerWidth();
+        $('#cover-layer').show();
+        $('#cover-layer').animate({'right': width}, {duration: 400});
+        $('#slide-menu').animate({'right': 0}, {duration: 400});
+      }
+    });
+    $('#cover-layer').on('click', function () {
+      var width = $('#slide-menu').outerWidth();
+      $('#cover-layer').animate({'right': 0}, {duration: 400});
+      $('#slide-menu').animate({'right': -width}, {duration: 400});
+      $('#cover-layer').hide();
+    });
+  });
+  </script>
+</body>
+</html>

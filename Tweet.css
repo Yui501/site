@@ -1,0 +1,100 @@
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+html, body{
+  height: 100%;
+  font-family: "Noto Sans JP", "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+header{
+  background-color:#26d0c9;
+  color:#fff;
+  position:fixed;
+  z-index:3;
+  width:100%;
+  padding:1px 1px;
+  text-align:center;
+  font-size:60px;
+}
+header #but1{
+  float:right;
+  position:absolute;
+  top:0;
+  right:10px;
+  font-size:60px;
+  padding:0;
+  margin:0;
+  color: #fff;
+  text-decoration:none;
+}
+main{
+  padding: 100px 80px;
+}
+
+#form h2{
+  float:left;
+  font-size:30px;
+  padding:none;
+}
+#form textarea{
+  width: 100%;
+  height:300px;
+  font-size: 24px;
+  box-sizing: border-box;
+  border: none;
+  padding: 0;
+  background-color:#000;
+  color: #00ff00;
+}
+#form textarea:focus{
+  outline: none;
+}
+#area{
+  position: relative;
+  font-size: 0;
+}
+#area .twe{
+  position:absolute; 
+  bottom: 0;
+  right: 0;
+  background: white;
+  border: none;
+  padding: 0 10px;
+  margin: 0;
+  font-size: 20px;
+  line-height: 30px;
+}
+#res{
+  text-align: center;
+  background: black;
+  position:fixed;
+  bottom:0;
+  left:0;
+  width: 100%;
+  color: white;
+  font-size: 24px;
+}
+#cover-layer{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  background:skyblue;
+  opacity: 0.6;
+  display: none;
+  z-index: 4;
+}
+#slide-menu {
+  position: fixed;
+  height: 100%;
+  top:0;
+  right:-150px;
+  width:150px;
+  background:#26d0c9;
+  z-index: 5;
+}
+#slide-menu a{
+ color:#ffff;
+ font-size:30px;
+ color:#fff;
+ padding:10px;
+ text-decoration:none;
+}

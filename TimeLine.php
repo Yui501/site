@@ -9,12 +9,12 @@ function h($str, $double = true){
 
 date_default_timezone_set('Asia/Tokyo');
 
-$via = new TwitterOAuth("4oiYwOByxwDQ14qkcQ5jR11JB", "RAUOpBGBZQY9HKB4QXrQs4vVov8JjcyrtxYHfWtNrSKbPjBb9y", $_COOKIE['oauth_token'], $_COOKIE['oauth_token_secret']);
+$via = new TwitterOAuth("4oiYwOByxwDQ14qkcQ5jR11JB", "RAUOpBGBZQY9HKB4QXrQs4vVov8JjcyrtxYHfWtNrSKbPjBb9y", "2805705715-kpYKix27hsKez3vDtyAXRTg5GaF9t9ic36mHyAd", "cSyHDFT4B3DOIs2DbTPIYbv21aaiVKn9DYftvzf4julgQ");
 $statuses = $via->get('statuses/home_timeline', ['count' => '50']);
 
 header('Content-Type: text/html; charset=utf-8');
 ?>
- 
+
 <!DOCTYPE html>
 <html>
 <head>

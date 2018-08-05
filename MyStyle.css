@@ -4,7 +4,7 @@ html, body{height: 100%;}
 position: relative;
 }
 #e .but1{
-  float:right; 
+  float:right;
   position: absolute;
   top:0;
   right:15px;
